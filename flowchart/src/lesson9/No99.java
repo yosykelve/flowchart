@@ -22,7 +22,7 @@ public class No99 {
 			}else {
 				Flag = "OFF";
 			}
-		}while(Flag == "ON");
+		}while(Flag == "OFF");
 
 		//平均値の計算
 		if(count == 0) {
