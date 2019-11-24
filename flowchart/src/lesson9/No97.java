@@ -8,21 +8,20 @@ public class No97 {
 		// TODO 自動生成されたメソッド・スタブ
 		String Flag = "ON";
 		double goukei = 0;
-		double zeiritsu = 1.1;
-		Scanner scan = new Scanner(System.in);
+		double zeiritsu = 1.08;
+
 
 		//商品の値段を合算する
-		do {
-			System.out.println("商品の価格を入力してください。終了する場合は[e]を入力してください");
-			Integer nedan = scan.nextInt();
+			System.out.println("商品の値段を入力してください。終了する場合は[e]を入力してください");
+			Scanner scan = new Scanner(System.in);
+			String nedan = scan.nextLine();
 			String str = "e";
-			int e = Integer.parseInt(str);
-			if(nedan != e) {
-				goukei = goukei + nedan;
-			}else {
+			if(nedan.equals(str)) {
 				Flag = "OFF";
+			}else{
+				Double nedan2 = Double.parseDouble(nedan);
+				goukei += nedan2;
 			}
-		}while(Flag == "ON");
 
 		//消費税の計算
 		goukei = goukei * zeiritsu;
